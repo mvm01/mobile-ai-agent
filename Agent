@@ -8,7 +8,7 @@ export async function askAgent(promptUsuario) {
     const promptCompleto = `${systemPrompt}\n\nUsuario: ${promptUsuario}\nAsistente:`;
 
     const payload = {
-        model: "gemma2:2b",
+        model: "qwen2.5:1.5b",
         prompt: promptCompleto,
         stream: false
     };
