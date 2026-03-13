@@ -31,37 +31,10 @@ To streamline deployment on any Android device (via Termux) or Linux/ARM environ
 This script handles the installation of Node.js, system package updates, dependency downloads, and environment preparation for the AI engine.
 
 **Step 1: Clone the repository**
-``(`)bash
-git clone [https://github.com/mvm01/mobile-ai-agent.git](https://github.com/mvm01/mobile-ai-agent.git)
-cd mobile-ai-agent
-
-Español//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-##  Visión General
-Este proyecto implementa una arquitectura de **Inteligencia Artificial en el Edge (Edge AI)**, ejecutando un Modelo de Lenguaje Pequeño (SLM) 100% de forma local en hardware ARM (procesadores Snapdragon). 
-
-El objetivo principal es demostrar que es posible tener un agente autónomo conversacional y operativo sin depender de APIs en la nube, garantizando:
-* **Privacidad absoluta:** Los datos nunca salen del dispositivo.
-* **Cero latencia de red:** Procesamiento nativo en el hardware anfitrión.
-* **Reducción de costos operativos:** Infraestructura sin cobros por token o suscripciones de nube.
-
-
-
-## Stack Tecnológico
-* **Motor de Inferencia:** [Ollama](https://ollama.com/)
-* **Modelo LLM:** Qwen 1.5B (Optimizado para entornos con memoria RAM restringida).
-* **Backend / API:** Node.js (Servidor Express/Nativo para enrutamiento local).
-* **Entorno de Ejecución:** Termux (Linux sobre Android) / Entornos ARM nativos.
-
----
-
-## Instalación Rápida (Despliegue automatizado)
-
-Para facilitar el despliegue en cualquier dispositivo Android (vía Termux) o en entornos Linux/ARM, este repositorio incluye un script de configuración automatizada (`setup.sh`). 
-
-Este script se encargará de instalar Node.js, actualizar los paquetes del sistema, descargar las dependencias y preparar el entorno para el motor de IA.
-
-**Paso 1: Clonar el repositorio**
 ```bash
 git clone [https://github.com/mvm01/mobile-ai-agent.git](https://github.com/mvm01/mobile-ai-agent.git)
 cd mobile-ai-agent
+
+
+
+
