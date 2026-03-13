@@ -12,7 +12,7 @@ The main objective is to demonstrate the feasibility of deploying an autonomous,
 * **Zero Network Latency:** Native processing directly on the hardware.
 * **Reduced Operational Costs:** Infrastructure with zero token fees or cloud subscription dependencies.
   
-##Project Roadmap
+Project Roadmap
 This ecosystem is continuously evolving towards enterprise automation:
 
 [x] Phase 0: Deployment of core infrastructure and Node.js server on Android.
