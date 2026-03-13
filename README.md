@@ -11,7 +11,17 @@ The main objective is to demonstrate the feasibility of deploying an autonomous,
 * **Absolute Privacy:** Data never leaves the host device.
 * **Zero Network Latency:** Native processing directly on the hardware.
 * **Reduced Operational Costs:** Infrastructure with zero token fees or cloud subscription dependencies.
+  
+##Project Roadmap
+This ecosystem is continuously evolving towards enterprise automation:
 
+[x] Phase 0: Deployment of core infrastructure and Node.js server on Android.
+
+[ ] Phase 1: Webhook connection (Localtunnel/Ngrok) to interact with the agent from other network devices.
+
+[ ] Phase 2: Integration with B2B platforms (Slack/WhatsApp) for automated alerts and workflows.
+
+[ ] Phase 3: Integration of "Tool Calling" to execute host OS scripts (e.g., sending emails, log analysis).
 
 
 ## Tech Stack
