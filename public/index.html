@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Agente Local</title>
+    <title>My Local agent</title>
     <style>
         body { font-family: Arial, sans-serif; background-color: #121212; color: white; margin: 0; display: flex; flex-direction: column; height: 100vh; }
         #chat { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
@@ -17,11 +17,11 @@
 </head>
 <body>
     <div id="chat">
-        <div class="mensaje agente">¡Hola! Soy tu agente local ejecutándose en Qwen 2.5. ¿En qué te ayudo hoy?</div>
+        <div class="mensaje agente"> Hello! I am your local agent using Qwen 2.5. How can I help?</div>
     </div>
     <div id="input-area">
         <input type="text" id="mensaje-input" placeholder="Escribe tu mensaje...">
-        <button onclick="enviarMensaje()">Enviar</button>
+        <button onclick="Sendamessage()">send</button>
     </div>
     <script>
         async function enviarMensaje() {
