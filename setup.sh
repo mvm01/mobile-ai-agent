@@ -1,33 +1,33 @@
 #!/bin/bash
-# setup.sh - Instalador automatizado para Mobile Edge AI Agent en Termux/Linux
+# setup.sh - Installer for Mobile Edge AI Agent en Termux/Linux
 
-echo "Iniciando configuración del Agente de IA Local..."
+echo "Starting local agent configuration..."
 
-# 1. Actualizar repositorios de Termux/Linux
-echo "Actualizando paquetes del sistema..."
+# 1 Update thermux packages
+echo "Updating system packages..."
 pkg update -y && pkg upgrade -y || sudo apt update -y && sudo apt upgrade -y
 
-# 2. Instalar dependencias base (Node.js y Git)
-echo "Instalando Node.js y utilidades..."
+# 2. Install the dependencies (Node.js y Git)
+echo "Installing Node.js and utilities..."
 pkg install nodejs git -y || sudo apt install nodejs git -y
 
-# 3. Instalar librerías de Node.js (package.json)
-echo "Instalando dependencias del proyecto (npm)..."
+# 3. Install libraries of Node.js (package.json)
+echo "Installing dependencies of the project (npm)..."
 npm install
 
-# 4. Verificación del Motor Ollama
-echo "Verificando motor de IA (Ollama)..."
+# 4. Verification of Ollama Motor
+echo "Verifying (Ollama) IA motor..."
 if command -v ollama >/dev/null 2>&1; then
-    echo "Ollama detectado."
-    echo "Asegurando que el modelo Qwen 1.5B esté descargado..."
-    # Ejecuta la descarga en segundo plano si no existe
+    echo "Ollama detected."
+    echo "Ensuring the model Qwen 1.5B is downloaded..."
+    # Execute the download
     ollama pull qwen:1.5b
 else
-    echo "ADVERTENCIA: Ollama no fue detectado en el PATH automático."
-    echo "Asegúrate de instalar Ollama y descargar el modelo (ollama pull qwen:1.5b) para que el agente funcione correctamente."
+    echo "Warning: Ollama was not detected."
+    echo "Make sure to install Ollama (ollama pull qwen:1.5b) for the agent to work properly ."
 fi
 
 echo "---------------------------------------------------"
-echo "¡Configuración completada con éxito!"
-echo "Para encender tu agente, ejecuta: node server.js"
+echo "¡Configuration completed successfully!"
+echo "To execute the server: node server.js"
 echo "---------------------------------------------------"
