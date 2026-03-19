@@ -1,14 +1,23 @@
 {
-  "name": "mi-agente-local",
+  "name": "mobile-ai-agent",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Local-first Edge AI execution layer for a broader GTM, Compliance, and RevOps automation ecosystem.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "edge-ai",
+    "ollama",
+    "nodejs",
+    "android",
+    "termux",
+    "local-llm",
+    "revops",
+    "gtm"
+  ],
+  "author": "Mauricio Muñoz",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "express": "^5.2.1"
