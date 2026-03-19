@@ -1,48 +1,77 @@
 # Mobile Edge AI Agent
 
-![Status](https://img.shields.io/badge/Status-Active-success)
-![Platform](https://img.shields.io/badge/Platform-Android%20(Termux)%20%7C%20Windows%20ARM-blue)
-![Stack](https://img.shields.io/badge/Stack-Node.js%20%7C%20Ollama-orange)
+![Status](https://img.shields.io/badge/Status-In%20Development-success)
+![Platform](https://img.shields.io/badge/Platform-Android%20(Termux)%20%7C%20ARM-blue)
+![Stack](https://img.shields.io/badge/Stack-Node.js%20%7C%20Ollama%20%7C%20Local%20AI-orange)
 
 ## Overview
-This project implements an **Edge AI** architecture, running a Small Language Model (SLM) 100% locally on ARM hardware (Snapdragon processors). 
 
-The main objective is to demonstrate the feasibility of deploying an autonomous, conversational, and operational agent without relying on cloud-based APIs, ensuring:
-* **Absolute Privacy:** Data never leaves the host device.
-* **Zero Network Latency:** Native processing directly on the hardware.
-* **Reduced Operational Costs:** Infrastructure with zero token fees or cloud subscription dependencies.
-  
-Project Roadmap
-This ecosystem is continuously evolving towards enterprise automation:
+`mobile-ai-agent` is the local execution layer of a broader **GTM / Compliance / RevOps automation ecosystem** being developed for fully local and privacy-preserving operation.
 
-[x] Phase 0: Deployment of core infrastructure and Node.js server on Android.
+This project focuses on running a Small Language Model (SLM) directly on ARM hardware and exposing it through a lightweight local API and interface. The goal is to prove that operational AI workflows can be executed without depending on cloud-hosted inference for the core decision layer.
 
-[ ] Phase 1: Webhook connection (Localtunnel/Ngrok) to interact with the agent from other network devices.
+This repository is **not intended to be a standalone chatbot only**. It is the foundational module that will connect to:
+- a public-facing prototype experience in `avtaja-portfolio`
+- a local GTM orchestration layer
+- compliance and RevOps workflow logic
+- future integrations for alerts, validation, and operational decision support
 
-[ ] Phase 2: Integration with B2B platforms (Slack/WhatsApp) for automated alerts and workflows.
+## Role in the System
 
-[ ] Phase 3: Integration of "Tool Calling" to execute host OS scripts (e.g., sending emails, log analysis).
+Within the full ecosystem, this repository is responsible for:
 
+- local model inference
+- local API exposure
+- agent interaction logic
+- execution entry point for future workflow integrations
+- serving as the secure AI core behind other connected interfaces
+
+## Why this matters
+
+Most GTM and operational automation systems rely heavily on cloud APIs, external orchestration, and third-party SaaS dependencies. This project explores a different approach:
+
+- **privacy-first**: sensitive operational data can remain local
+- **low-latency**: inference runs directly on-device
+- **lower cost**: reduced dependency on token-based pricing
+- **modularity**: the agent can act as one subsystem inside a larger automation machine
+
+## Current Status
+
+This repository is currently in the infrastructure phase.
+
+### Completed
+- Local Node.js server running on Android / ARM environment
+- Ollama-based local model connection
+- Basic chat interface
+- Local API structure for prompt/response flow
+
+### In Progress
+- integration with the `avtaja-portfolio` prototype
+- connection to local GTM workflow logic
+- architecture refinement for multi-module orchestration
+
+### Planned
+- webhook and remote device access
+- workflow/tool execution
+- compliance and RevOps validation routines
+- operational dashboards and system signals
+
+## System Relationship
+
+This repo should be understood as part of a larger architecture:
+
+`Portfolio / Web Experience -> Local Agent -> GTM / Compliance / RevOps Logic`
+
+The public-facing portfolio layer demonstrates the experience and business surface, while `mobile-ai-agent` powers the local intelligence and execution backbone.
 
 ## Tech Stack
-* **Inference Engine:** [Ollama](https://ollama.com/)
-* **LLM:** Qwen 1.5B (Optimized for RAM-restricted environments).
-* **Backend / API:** Node.js (Express/Native server for local routing).
-* **Execution Environment:** Termux (Linux on Android) / Native ARM environments.
 
----
+- **Inference Engine:** Ollama
+- **Model:** Qwen 2.5 / lightweight local model variants
+- **Backend:** Node.js + Express
+- **Execution Environment:** Termux / Linux on ARM
+- **Frontend:** lightweight local web UI
 
-## Quick Installation (Automated Deployment)
+## Project Goal
 
-To streamline deployment on any Android device (via Termux) or Linux/ARM environments, this repository includes an automated setup script (`setup.sh`). 
-
-This script handles the installation of Node.js, system package updates, dependency downloads, and environment preparation for the AI engine.
-
-**Step 1: Clone the repository**
-```bash
-git clone [https://github.com/mvm01/mobile-ai-agent.git](https://github.com/mvm01/mobile-ai-agent.git)
-cd mobile-ai-agent
-
-
-
-
+Build a modular, local-first AI operations system where the intelligence layer, workflow logic, and user-facing surfaces can work together without requiring the core decision engine to leave the device.
