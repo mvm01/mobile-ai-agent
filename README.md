@@ -75,3 +75,18 @@ The public-facing portfolio layer demonstrates the experience and business surfa
 ## Project Goal
 
 Build a modular, local-first AI operations system where the intelligence layer, workflow logic, and user-facing surfaces can work together without requiring the core decision engine to leave the device.
+
+## High-Level Architecture
+
+```text
+avtaja-portfolio
+    ↓
+public-facing mock experience / prototype interface
+
+mobile-ai-agent
+    ↓
+local inference + API + execution layer
+
+GTM / Compliance / RevOps Machine
+    ↓
+business logic, workflow validation, orchestration, and future automation
